@@ -1,0 +1,201 @@
+/* src/styles/components.css */
+/* Styles partagés : boutons, badges, barres de progression, états vides */
+
+/* ── Boutons ────────────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+.btn-lg   { padding: 13px 28px; font-size: 15px; }
+.btn-sm   { padding: 6px 14px;  font-size: 12px; }
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+.btn-primary:hover {
+  background: var(--accent2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.4);
+}
+
+.btn-secondary {
+  background: var(--surface2);
+  color: var(--text);
+  border: 1px solid var(--border2);
+}
+.btn-secondary:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.btn-danger {
+  background: rgba(255, 92, 106, 0.12);
+  color: var(--red);
+  border: 1px solid rgba(255, 92, 106, 0.25);
+}
+.btn-danger:hover {
+  background: rgba(255, 92, 106, 0.2);
+}
+
+/* ── Badges ─────────────────────────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge-green  { background: rgba(34, 211, 160, 0.15); color: var(--green);   }
+.badge-blue   { background: rgba(108, 99, 255, 0.15); color: var(--accent2); }
+.badge-yellow { background: rgba(251, 191, 36, 0.15); color: var(--yellow);  }
+.badge-muted  { background: var(--bg3);               color: var(--text3);   }
+
+/* ── Barre de progression ───────────────────────────────────────────────────── */
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--bg3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: width 0.5s ease;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-pct {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text3);
+  width: 32px;
+  text-align: right;
+}
+
+/* ── État vide ──────────────────────────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--text3);
+}
+
+.empty-state .emoji {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.empty-state p {
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* ── Section title ──────────────────────────────────────────────────────────── */
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Breadcrumb ─────────────────────────────────────────────────────────────── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text3);
+  margin-bottom: 24px;
+}
+
+.breadcrumb-link {
+  cursor: pointer;
+  transition: color 0.15s;
+  background: none;
+  border: none;
+  color: var(--text3);
+  font-size: 13px;
+  padding: 0;
+}
+
+.breadcrumb-link:hover { color: var(--text2); }
+.breadcrumb-sep { color: var(--text3); }
+.breadcrumb-cur { color: var(--text2); }
+
+/* ── Tabs ───────────────────────────────────────────────────────────────────── */
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--surface);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  width: fit-content;
+  margin-bottom: 24px;
+}
+
+.tab-btn {
+  padding: 8px 20px;
+  border-radius: 9px;
+  border: none;
+  background: none;
+  color: var(--text2);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: var(--font-body);
+}
+
+.tab-btn:hover       { color: var(--text); background: var(--bg3); }
+.tab-btn.tab-active  { background: var(--accent); color: white; font-weight: 600; }
+
+/* ── Cards génériques ───────────────────────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  padding: 24px;
+}
+
+.card:hover {
+  border-color: var(--border2);
+}
