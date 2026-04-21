@@ -1,0 +1,147 @@
+/* src/pages/Progress.module.css */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+}
+
+/* ── Carte globale ───────────────────────────────────────────────────────────── */
+.overallCard {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.12) 0%, rgba(139, 133, 255, 0.04) 100%);
+  border: 1px solid rgba(108, 99, 255, 0.22);
+  border-radius: var(--radius2);
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.overallInfo { flex: 1; }
+
+.overallTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.overallSub {
+  font-size: 13px;
+  color: var(--text2);
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.overallBadges { margin-top: 12px; }
+
+/* ── Liste modules ───────────────────────────────────────────────────────────── */
+.moduleList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* ── Carte module ────────────────────────────────────────────────────────────── */
+.moduleCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  padding: 24px;
+  transition: border-color 0.2s;
+}
+
+.moduleCard:hover { border-color: var(--border2); }
+
+.mcHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.mcIcon {
+  font-size: 22px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg3);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.mcInfo  { flex: 1; min-width: 0; }
+.mcTitle { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+.mcDesc  { font-size: 12px; color: var(--text3); line-height: 1.4; }
+
+.mcPct {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.mcBar { margin-bottom: 18px; }
+
+/* ── Détails ─────────────────────────────────────────────────────────────────── */
+.mcDetails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.mcDetail {
+  background: var(--bg3);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.mcDetailLabel {
+  font-size: 10px;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.mcDetailValue {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text);
+}
+
+/* ── Reset ───────────────────────────────────────────────────────────────────── */
+.resetSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: rgba(255, 92, 106, 0.05);
+  border: 1px solid rgba(255, 92, 106, 0.15);
+  border-radius: var(--radius);
+  flex-wrap: wrap;
+}
+
+.resetText {
+  font-size: 13px;
+  color: var(--text3);
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .overallCard   { flex-direction: column; text-align: center; padding: 24px; }
+  .mcDetails     { grid-template-columns: 1fr 1fr; }
+  .resetSection  { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+  .mcDetails   { grid-template-columns: 1fr 1fr; }
+  .mcHeader    { flex-wrap: wrap; }
+}
