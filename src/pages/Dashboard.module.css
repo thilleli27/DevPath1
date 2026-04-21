@@ -1,0 +1,100 @@
+/* src/pages/Dashboard.module.css */
+
+.page { display: flex; flex-direction: column; gap: 0; }
+
+/* ── Bannière ────────────────────────────────────────────────────────────────── */
+.banner {
+  background: linear-gradient(135deg, #1a1f35 0%, #0f1117 100%);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: var(--radius2);
+  padding: 32px 36px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bannerContent { position: relative; z-index: 1; }
+
+.bannerTitle {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.bannerTitle span { color: var(--accent2); }
+
+.bannerSub {
+  color: var(--text2);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.bannerStats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.bStat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.bStat strong { color: var(--text); font-size: 15px; font-weight: 700; }
+.bStat span   { color: var(--text2); }
+
+.bannerGlow {
+  position: absolute;
+  right: -60px; top: -60px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Stats grid ──────────────────────────────────────────────────────────────── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* ── Modules grid ────────────────────────────────────────────────────────────── */
+.modulesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+/* ── CTA ─────────────────────────────────────────────────────────────────────── */
+.cta {
+  background: rgba(108, 99, 255, 0.08);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta p { font-size: 14px; color: var(--text2); }
+.cta p strong { color: var(--text); }
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .banner  { padding: 20px; }
+  .bannerTitle { font-size: 22px; }
+  .statsGrid   { grid-template-columns: 1fr 1fr; }
+  .modulesGrid { grid-template-columns: 1fr; }
+  .cta { flex-direction: column; align-items: flex-start; }
+}
