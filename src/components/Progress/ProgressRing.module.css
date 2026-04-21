@@ -1,0 +1,43 @@
+/* src/components/Progress/ProgressRing.module.css */
+
+.ring {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.bg {
+  fill: none;
+  stroke: var(--surface2);
+  stroke-width: 8;
+}
+
+.fill {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease;
+}
+
+.text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pct {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text);
+  line-height: 1;
+}
+
+.sub {
+  font-size: 10px;
+  color: var(--text3);
+  margin-top: 2px;
+}
