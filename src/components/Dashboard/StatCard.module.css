@@ -1,0 +1,33 @@
+/* src/components/Dashboard/StatCard.module.css */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--card-accent, var(--accent));
+}
+
+.card:hover { border-color: var(--border2); }
+
+.icon  { font-size: 22px; display: block; margin-bottom: 12px; }
+
+.value {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.label { font-size: 13px; color: var(--text2); }
