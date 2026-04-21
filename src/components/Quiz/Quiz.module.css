@@ -1,0 +1,210 @@
+/* src/components/Quiz/Quiz.module.css */
+
+.container { max-width: 700px; }
+
+/* ── Intro ───────────────────────────────────────────────────────────────────── */
+.intro {
+  text-align: center;
+  padding: 48px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  max-width: 520px;
+}
+
+.introEmoji { font-size: 56px; display: block; margin-bottom: 16px; }
+
+.introTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.introSub {
+  font-size: 14px;
+  color: var(--text2);
+  margin-bottom: 16px;
+}
+
+.introPrev {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 13px;
+  color: var(--text3);
+  background: var(--bg3);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.introPrev strong { color: var(--text); }
+
+/* ── Progress bar ────────────────────────────────────────────────────────────── */
+.progressCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text2);
+  margin-bottom: 10px;
+}
+
+.progressBar {
+  height: 6px;
+  background: var(--bg3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+/* ── Question ────────────────────────────────────────────────────────────────── */
+.questionCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  padding: 28px;
+}
+
+.questionNum {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent2);
+  margin-bottom: 10px;
+}
+
+.questionText {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+/* ── Options ─────────────────────────────────────────────────────────────────── */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg3);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: left;
+  width: 100%;
+  color: var(--text);
+  font-size: 14px;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.option:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: rgba(108, 99, 255, 0.08);
+}
+
+.option:disabled { cursor: default; }
+
+.optCorrect {
+  border-color: var(--green) !important;
+  background: rgba(34, 211, 160, 0.1) !important;
+  color: var(--green) !important;
+}
+
+.optWrong {
+  border-color: var(--red) !important;
+  background: rgba(255, 92, 106, 0.1) !important;
+  color: var(--red) !important;
+}
+
+.letter {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--surface2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700;
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+/* ── Explication ─────────────────────────────────────────────────────────────── */
+.explanation {
+  background: rgba(108, 99, 255, 0.08);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.55;
+}
+
+.explanation strong { color: var(--accent2); }
+
+/* ── Résultats ───────────────────────────────────────────────────────────────── */
+.result {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  padding: 48px;
+  text-align: center;
+  max-width: 520px;
+}
+
+.resultEmoji { font-size: 56px; display: block; margin-bottom: 16px; }
+
+.resultScore {
+  font-size: 52px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  margin-bottom: 8px;
+}
+
+.resultLabel {
+  font-size: 15px;
+  color: var(--text2);
+  margin-bottom: 32px;
+}
+
+.breakdown {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.bdItem   { text-align: center; }
+.bdValue  { font-size: 24px; font-weight: 700; font-family: var(--font-mono); }
+.bdLabel  { font-size: 12px; color: var(--text3); margin-top: 4px; }
+
+.resultActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
